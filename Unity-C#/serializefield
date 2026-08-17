@@ -1,0 +1,11 @@
+参照について
+[SerializeField] アクセス権  変数型   変数名;
+　　　　　　　　　　　①　　　　　②　　　　③
+
+①
+ private・・・そのコード内でしか
+②
+ string・・・文字列
+ Transform・・・物体のscene内の位置・角度
+ KeyCode・・・キーボードのボタン
+③

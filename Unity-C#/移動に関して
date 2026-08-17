@@ -1,0 +1,9 @@
+transform.Translate(move.normalized * speed * Time.deltaTime);
+transform・・・現在の物体の位置
+~.Translate()・・・~を()内のベクトルのように動かす
+move.normalized・・・moveベクトルを正規化したもの
+Time.deltaTime・・・時間ごとにするてきな
+
+Vector2 変数 = Vector2.zero;
+・・・変数を二次元ベクトル(０．０)にする命令
+・・・変数.xと変数.yで要素ごとに＝で代入できる

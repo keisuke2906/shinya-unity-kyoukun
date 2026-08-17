@@ -1,0 +1,4 @@
+SceneManager.LoadScene(シーンA);
+・・・シーンAに動く
+enabled = false; 
+・・・Update() が実行されなくなる

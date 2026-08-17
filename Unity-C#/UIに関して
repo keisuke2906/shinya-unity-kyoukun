@@ -1,0 +1,22 @@
+using TMPro;
+・・・画像を使いたいなあ
+
+Time.deltaTime
+・・・1フレームごとの時間
+
+private void UpdateUI()
+{
+}
+・・・フレームごとにUIを更新する
+
+timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+・・・後ろに並べた変数の一つ目を{0:00}に、二つ目を{1:00}に代入する命令。00は二桁表示にする命令
+
+ゲージの名前大体はserialfield.MaxValue = 残りのゲージの値最大値;
+・・・残りゲージの最大値を代入する命令
+
+ゲージの名前大体はserialfield.value = 残りのゲージの値最大値と最小値が設定されている;
+・・・残りゲージの割合を代入する命令
+
+画像の名前大体はserialfield.fillAmount = 割合;
+・・・画像の表示割合を代入する命令

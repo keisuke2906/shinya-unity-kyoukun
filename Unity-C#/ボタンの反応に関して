@@ -1,0 +1,5 @@
+if (Keyboard.current.キーの名前Key.isPressed)
+・・・キーを押すとき
+
+if (kbd.キーの名前Key.wasPressedThisFrame)
+・・・キーがこのフレーム内に押し始めた時、つまり押し込み中毎フレームtrueになるわけではない。

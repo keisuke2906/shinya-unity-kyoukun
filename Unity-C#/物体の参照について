@@ -1,0 +1,22 @@
+座標タイプの変数は別の変数で＝しても関係が数学的になる(変化が共有される)
+
+self.CompareTag("タグ名")
+・・・selfのtagがタグ名かどうかのブール数を返す関数
+
+GameObject.FindGameObjectsWithTag(タグの名前)
+・・・
+
+Physics2D.OverlapCircleAll(座標, 半径)
+・・・２Dで、座標から半径内の物理演算オブジェクトすべて
+
+
+self.SetParent(何か)
+・・・「なにか」をselfの親にする
+
+self.localPosition
+・・・selfの親に対する相対座標
+
+単なるtransformはそのスクリプトがついている物体の座標情報
+
+Vector2.Distance(座標１, 座標２)
+・・・二つの座標の距離
