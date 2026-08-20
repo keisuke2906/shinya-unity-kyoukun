@@ -5,3 +5,4 @@ Transform・・・物体のscene内の位置・角度などオブジェクトの
 KeyCode・・・キーボードのボタン
 Collider2D・・・2Dの物理演算物体・あたり判定
 GameObject・・・講義オブジェクト
+Rigidbody2D・・・2Dの物理的性質

@@ -1,0 +1,5 @@
+１．画像をアセットに追加
+
+２．画像のインスペクターのTexture TypeをSprite (2D and UI)に、Sprite Modeをsingleに設定する。
+
+３．ヒエラルキーにドラッグアンドドロップ

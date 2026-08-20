@@ -1,0 +1,16 @@
+１．ヒエラルキーに空オブジェクトを作成(わかりやすく名前はgridとするのがよい)
+
+２．作成した空オブジェクトの子に２D Object > tilemapを追加
+
+３．追加したオブジェクトのインスペクターにtilemap colliderとcomposite colliderをアタッチする
+
+４．自動追加されたrigitbody2DのBody typeをdynamicからstaticに変更する
+
+５．tilemap colliderのComposite Operation欄をMergeに設定
+
+６．Window > 2D > Tile Palette を開き、Active Palettからcreate new palettを押し、タイルパレットを作成する
+
+７．パレットの空白にアセットの画像をドラッグアンドドロップ
+
+
+プロジェクトセッティングから当たり判定の設定も見逃さずに。

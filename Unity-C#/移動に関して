@@ -7,3 +7,20 @@ Time.deltaTime・・・時間ごとにするてきな
 Vector2 変数 = Vector2.zero;
 ・・・変数を二次元ベクトル(０．０)にする命令
 ・・・変数.xと変数.yで要素ごとに＝で代入できる
+
+GetComponent<Rigidbody2D>()
+・・・その二次元物体の物理的設定を取得する。＝で結べば数学的な関係性からその後のコードでいじれる。
+
+GetComponent<Rigidbody2D>().position
+・・・その二次元物体の物理的位置を取得する。＝で結べば数学的な関係性からその後のコードでいじれる。
+
+GetComponent<Rigidbody2D>().MovePosition()
+・・・その二次元物体の物理的な移動を二個目の()に設定する。
+
+private void OnMove(InputValue value) {}
+・・・何かしらボタンが押されるたびに呼び出され、{}内を実行する関数。valueに入力がベクトル化されたものが保存される。
+　　　コンポーネントにplayer inputが必要
+
+self.Get<Vector2>()
+・・・selfの二次元ベクトルを出す。数学的な＝を使う。OnMove関数でベクトル化された入力値よく使う。
+

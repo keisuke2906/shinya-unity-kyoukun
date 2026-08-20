@@ -1,0 +1,71 @@
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Tilemaps;
+
+public class HouseController : MonoBehaviour
+{
+    [Header("この家専用の屋根Tilemap")]
+    [SerializeField] private Tilemap roofTilemap;
+
+    [Header("フェード設定")]
+    [SerializeField] private float fadeDuration = 0.2f;
+    [Range(0f, 1f)]
+    [SerializeField] private float targetAlphaOnEnter = 0f;
+
+    private CancellationTokenSource fadeCts;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            FadeRoofAsync(targetAlphaOnEnter).Forget();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            FadeRoofAsync(1.0f).Forget();
+        }
+    }
+
+    private async UniTaskVoid FadeRoofAsync(float targetAlpha)
+    {
+        // 進行中のフェードをキャンセルして新しく開始
+        fadeCts?.Cancel();
+        fadeCts?.Dispose();
+        fadeCts = new CancellationTokenSource();
+
+        var token = CancellationTokenSource.CreateLinkedTokenSource(
+            fadeCts.Token, 
+            this.GetCancellationTokenOnDestroy()
+        ).Token;
+
+        if (roofTilemap == null) return;
+
+        Color startColor = roofTilemap.color;
+        float startAlpha = startColor.a;
+        float elapsedTime = 0f;
+
+        try
+        {
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float newAlpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / fadeDuration);
+                roofTilemap.color = new Color(startColor.r, startColor.g, startColor.b, newAlpha);
+
+                // 1フレーム待機（ゼロアロケーション）
+                await UniTask.Yield(PlayerLoopTiming.Update, token);
+            }
+
+            roofTilemap.color = new Color(startColor.r, startColor.g, startColor.b, targetAlpha);
+        }
+        catch (System.OperationCanceledException)
+        {
+            // フェード中断時は何もしない
+        }
+    }
+}
