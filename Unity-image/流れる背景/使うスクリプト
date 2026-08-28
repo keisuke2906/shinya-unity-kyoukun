@@ -1,0 +1,20 @@
+public class UVScroller : MonoBehaviour
+{
+        public float scrollSpeed = 0.1f; 
+    private Material targetMaterial;
+    private float offsetY = 0f;
+
+    void Start()
+    {
+        targetMaterial = GetComponent<Renderer>().material;
+    }
+
+    void Update()
+    {
+        
+        offsetY += scrollSpeed * Time.deltaTime;
+        
+        
+        targetMaterial.mainTextureOffset = new Vector2(0, offsetY);
+    }
+}

@@ -1,0 +1,14 @@
+private void OnMove(InputValue value) {}
+・・・何かしらボタンが押されるたびに呼び出され、{}内を実行する関数。valueに入力がベクトル化されたものが保存される。
+　　　コンポーネントにplayer inputが必要
+
+private void OnTriggerEnter2D(Collider2D collision)
+・・・is Torrigerがcolliderについたオブジェクトがなにかに当たったときに呼び出される関数。
+　　　接触した物体の情報がcollisionに保存される
+
+private void OnTriggerExit2D(Collider2D collision)
+・・・is Torrigerがcolliderについたオブジェクトからなにかが出たときに呼び出される関数。
+　　　接触した物体の情報がcollisionに保存される
+
+GetComponent<Renderer>()
+・・・その物体の描画を担う部分
