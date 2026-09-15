@@ -1,0 +1,5 @@
+[SerializeField]
+・・・以降に書いた変数にユニティ画面から好きに代入できる
+
+[CreateAssetMenu(fileName = "New Item", menuName = "ScriptableObject/Create Item")]
+・・・一行下のクラス1つをアセットに大量生産できるようにする

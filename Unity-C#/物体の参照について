@@ -20,3 +20,12 @@ self.localPosition
 
 Vector2.Distance(座標１, 座標２)
 ・・・二つの座標の距離
+
+self.color
+・・・selfの色の情報を出力
+
+self.a
+・・・変数型がcolorなselfのα値
+
+foreach (Transform child in self.transform){}
+・・・selfの子オブジェクトをそれぞれ参照している

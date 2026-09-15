@@ -24,3 +24,5 @@ private void OnMove(InputValue value) {}
 self.Get<Vector2>()
 ・・・selfの二次元ベクトルを出す。数学的な＝を使う。OnMove関数でベクトル化された入力値よく使う。
 
+self.mainTextureOffset = 座標
+・・・画像であるselfを座標分ずらす命令

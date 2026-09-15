@@ -1,0 +1,42 @@
+以下はアイテムを定義し、そのアイテムの設定を引き継いで分類し、各々の処理を定義している。
+
+
+public class ItemSO : ScriptableObject
+{
+   public string itemName;
+   public Sprite itemIcon;
+   public int stack;
+}
+
+public abstract class StatustypeSO : ItemSO
+{
+    protected virtual void Reset()
+    {
+        stack = 1;
+    }
+    public float parameter;
+    public abstract void UpdateStatus();
+}
+
+public abstract class ConsumableSO : ItemSO
+{
+    public abstract void Use();
+}
+
+[CreateAssetMenu(fileName = "Statustype", menuName = "Fuel")]
+public class  FuelSO : StatustypeSO
+{
+    public override void UpdateStatus()
+    {
+
+    }
+}
+
+[CreateAssetMenu(fileName = "Consumable", menuName = "Missile")]
+public class MissileSO : ConsumableSO
+{
+    public override void Use()
+    {
+        Debug.Log("Missile used!");
+    }
+}

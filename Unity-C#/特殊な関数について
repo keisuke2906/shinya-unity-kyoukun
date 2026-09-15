@@ -12,3 +12,8 @@ private void OnTriggerExit2D(Collider2D collision)
 
 GetComponent<Renderer>()
 ・・・その物体の描画を担う部分
+
+Destoroy()
+
+List<変数型>
+・・・指定した変数型の配列

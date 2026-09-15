@@ -20,3 +20,5 @@ timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
 画像の名前大体はserialfield.fillAmount = 割合;
 ・・・画像の表示割合を代入する命令
+
+canvasのインスペクター内のRenderModeをWorld SpaceにするとUIがカメラではなくその場に存在するようになる

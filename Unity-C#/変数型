@@ -1,4 +1,5 @@
-型名の後に[]をつけると配列化できる
+型名の後に[]をつけると不可変長配列化できる
+public 変数型 変数名 { get; private set; }・・・クラス内でしか変更できないけど、外から参照できる
 
 string・・・文字列
 Transform・・・物体のscene内の位置・角度などオブジェクトのありとあらゆる情報.x= で結べばx.positionなどでオブジェクト的に要素を呼び出せる
@@ -6,3 +7,8 @@ KeyCode・・・キーボードのボタン
 Collider2D・・・2Dの物理演算物体・あたり判定
 GameObject・・・講義オブジェクト
 Rigidbody2D・・・2Dの物理的性質
+Color・・・色
+Material・・・Material
+Sprite・・・画像
+List＜関数型＞・・・可変長な配列　.add()　関数型をクラス名にすることで、クラス内の変数・関数を保存される
+RectTransform・・・UIのtransform
