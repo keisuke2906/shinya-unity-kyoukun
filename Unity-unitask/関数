@@ -1,6 +1,0 @@
-Mathf.Lerp(A, B, t)
-・・・「AからBへの変化を、割合 t（0.0〜1.0）で計算する」関数です。
-
-UniTask.Yield(...)
-・・・処理をいったん止めて、変化を反映するすきを作る。止めるタイミングはカッコ内に書き、
-　　　PlayerLoopTiming.Updateを入れれば、Updateがそのタイミングになる

@@ -1,0 +1,26 @@
+awaitがつく関数が入っているStartなどの関数はvoidをasync UniTaskVoidをつけなくてはならない
+
+self.GetCancellationTokenOnDestroy()
+・・・self(オブジェクト)が破壊されたときにキャンセルが起きるトークン
+
+awai UniTask.Yield()
+・・・次フレームまで次行以降の処理を止める
+		PlayerLoopTiming.Updateを入れれば、Updateがそのタイミングになる
+
+await UniTask.NextFrame()
+・・・自フレームまで次行位以降の処理を止める。yeildよりもわかりやすい
+
+await UniTask.Delay(...)
+・・・()内の時間分、次行からの処理を遅らせる。()にはよくTimeSpan.FromSeconds(秒)が入れられる。
+
+await UniTask.WaitUntil(() => 条件)
+・・・条件成立まで次行以降の処理を待つ
+
+await UniTask.WaitWhile(() => 条件)
+・・・条件成立中次行以降の処理を待つ
+
+await UniTask.WhenAll(...)
+・・・()内の処理(asyncのつく関数であり、複数でもよい)を同時実行させ、すべて終わるまで次行以降の処理を待つ
+
+await UniTask.RunOnThreadPool(() => {})
+・・・{}内の処理を裏方で進めておく処理。

@@ -12,3 +12,5 @@ Material・・・Material
 Sprite・・・画像
 List＜関数型＞・・・可変長な配列　.add()　関数型をクラス名にすることで、クラス内の変数・関数を保存される
 RectTransform・・・UIのtransform
+Action・・・関数  基本はevent Action
+Quaternion

@@ -26,3 +26,11 @@ self.Get<Vector2>()
 
 self.mainTextureOffset = 座標
 ・・・画像であるselfを座標分ずらす命令
+
+self(Transform) = Vector3.MoveTowards(self, 移動先, 位置フレームごとの移動量)
+
+self.transform.rotation = Quaternion.Euler(x, y, z);
+・・・selfの角度を()内の通りにする。ちなみに一周３６０
+
+発進角度 = Quaternion.RotateTowards(発進角度, 目標角度, 速度)
+・・・発進角度から目標角度へ、速度に従った大きさ分移動。

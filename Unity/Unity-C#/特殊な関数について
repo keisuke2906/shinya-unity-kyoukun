@@ -17,3 +17,23 @@ Destoroy()
 
 List<変数型>
 ・・・指定した変数型の配列
+
+A = Mathf.Lerp(A, B, t)
+・・・A = B + (A - B) * t   tは割合。言い換えると、Aを、AからBへtの割合にで近づけている
+
+self?.Invoke()
+・・・self(型はAction)の関数をすべて実行する。
+
+Random.insideUnitCircle
+・・・半径１の円内のランダムな二次元座標
+Random.insideUnitSphere
+・・・半径1の球内のランダムな三次元座標
+
+ベクトル.normalized
+・・・そのベクトルの向きはそのままで、大きさを１にする
+
+self.Mathf.Rad2Deg
+・・・弧度法から度数法に変換する
+
+int layerIndex = 1 << LayerMask.NameToLayer("レイヤー名");
+・・・特定のレイヤーのインデックスを返す

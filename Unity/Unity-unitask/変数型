@@ -1,0 +1,4 @@
+CancellationTokenSource
+・・・キャンセルの発信源
+CancellationToken
+・・・キャンセル信号を常時受信できるブール値的なもの

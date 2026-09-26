@@ -6,9 +6,11 @@ self.CompareTag("タグ名")
 GameObject.FindGameObjectsWithTag(タグの名前)
 ・・・
 
-Physics2D.OverlapCircleAll(座標, 半径)
-・・・２Dで、座標から半径内の物理演算オブジェクトすべて
+Physics2D.OverlapCircleAll(座標, 半径, レイヤーのインデックス)
+・・・２Dで、座標から半径内の物理演算(コライダーのある)オブジェクトすべて。レイヤ―は省いてもいい
 
+Physics2D.OverlapCircleAll(座標, 半径, レイヤーのインデックス)
+・・・２Dで、座標から半径内の物理演算(コライダーのある)オブジェクトの内一つ。レイヤーは省いてもいい
 
 self.SetParent(何か)
 ・・・「なにか」をselfの親にする
@@ -29,3 +31,6 @@ self.a
 
 foreach (Transform child in self.transform){}
 ・・・selfの子オブジェクトをそれぞれ参照している
+
+Camera.main.transform.position
+・・・Camera.mainはmainCameraのタグが付いたカメラのこと
